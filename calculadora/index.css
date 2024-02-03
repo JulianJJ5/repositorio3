@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#txt{
+    width: 89.4%;
+    height: 100px;
+    margin-bottom: 1%;
+    font-size: 300%;
+    
+}
+
+#botones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    gap: 2%;
+    margin: 0px;
+
+}
+
+.boton{
+    padding: 15%;
+    font-size: 100%;
+    background-color: rgb(38, 184, 184);
+    cursor: pointer;
+    
+}
+
+#imagen{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#all{
+    position: relative;
+    left: 33%;
+    width: 40%;
+    top: 150px;
+}
