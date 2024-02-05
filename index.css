@@ -114,7 +114,7 @@
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 647px) and (min-width: 400px){
+@media screen and (max-width: 647px) and (min-width: 200px){
 
     #encabezado{
         width: 100%;
