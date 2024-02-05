@@ -1,27 +1,3 @@
-// const input = () => {
-//     document.getElementById("input").value += 
-//     parseInt(document.getElementsById("boton").value);
-//   };
-  
-//   const limpiar = () => {
-//     document.getElementById("input").value = "";
-//   };
-  
-  
-//    let sumar = () => {
-//       document.getElementById("input").value += "+";
-//     };
-//    let restar = () => {
-//       document.getElementById("input").value += "-";
-//     };
-//    let multiplicar = () => {
-//       document.getElementById("input").value += "*";
-//     }
-//     let dividir = () => {
-//       document.getElementById("input").value += "/";
-//     }
-
-
 function poner(value) {
   document.getElementById("txt").value += value;
 }
@@ -34,5 +10,7 @@ function borrar() {
   document.getElementById("txt").value = ""
 }
   
-
+function xd(){
+  document.createElement
+}
  

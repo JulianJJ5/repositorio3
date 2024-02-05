@@ -1,0 +1,40 @@
+#datos{
+    display: flex;
+    gap: 10%;
+}
+
+#name{
+width: 200%;
+}
+
+#fecha{
+    width: 200%;
+}
+
+#boton{
+    width: 200%;
+}
+
+#priori{
+    width: 200%;
+}
+
+table{
+    padding-top: 5%;
+}
+
+#cam{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid black;
+    text-align: center;
+}
+
+.cab{
+    border: 2px solid black;
+    height: 40px;
+    text-align: center;
+    line-height: 280%;
+    width: 10%;
+}
+

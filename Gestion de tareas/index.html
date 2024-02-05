@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de tareas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="datos">
+        <input type="text" id="nme" placeholder="introduzca la tarea, evento o recordatorio">
+        <input type="date" id="fecha">
+        <input type="checkbox" id="priori">
+        <button id="boton" onclick="add_tarea(), crear()">+</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <td class="cab" id="n">ACTIVIDAD</td>
+            <td class="cab" id="p">PRIORIDAD</td>
+            <td class="cab" id="f">FECHA</td>
+        </thead>
+        <tr id="cam">
+
+        </tr>
+
+    </table>
+</body>
+
+</html>
