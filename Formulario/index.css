@@ -96,3 +96,108 @@
     border-radius: 10px;
     width: 10%;
 }
+
+@media screen and (max-width: 647px) and (min-width: 200px){
+    #formulario{
+        margin-left: 10%; 
+        top: 20%; 
+    }
+
+    .columnas{
+        width: 100%;
+        height: auto;
+    }
+
+    #botn{
+        width: 90%;
+        font-size: 120%;
+    }
+
+    #tp{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 645px) and (min-width: 495px){
+    #formulario{
+        margin-left: 5%; 
+        top: 18%; 
+    }
+
+    .columnas{
+        width: 95%;
+        height: auto;
+    }
+
+    #botn{
+        width: 90%;
+        font-size: 110%;
+    }
+
+    #tp{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 735px) and (min-width: 647px){
+    #formulario{
+        margin-left: 15%; 
+        top: 23%; 
+    }
+
+    .columnas{
+        width: 110%;
+        height: auto;
+    }
+
+    #botn{
+        width: 90%;
+        font-size: 130%;
+    }
+
+    #tp{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 735px){
+    #formulario{
+        margin-left: 18%; 
+        top: 25%; 
+    }
+
+    .columnas{
+        width: 110%;
+        height: auto;
+    }
+
+    #botn{
+        width: 90%;
+        font-size: 140%;
+    }
+
+    #tp{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 800px){
+    #formulario{
+        margin-left: 20%; 
+        top: 27%; 
+    }
+
+    .columnas{
+        width: 110%;
+        height: auto;
+    }
+
+    #botn{
+        width: 90%;
+        font-size: 150%;
+    }
+
+    #tp{
+        width: 18%;
+    }
+}
