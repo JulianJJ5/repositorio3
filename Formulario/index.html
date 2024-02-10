@@ -79,7 +79,10 @@
         </div>
         <div id="botn">
             <div id="enviar">
-                <button id="tp" onclick="enviar(), pintar()">ENVIAR</button>
+                <button id="tp" onclick="enviar(), pintar(), limpiarCampos()">ENVIAR</button>
+            </div>
+            <div>
+                <button id="tp" onclick="limpiarCampos()">LIMPIAR CAMPOS</button>
             </div>
         </div>
     </div>
@@ -132,6 +135,17 @@
             document.getElementById("listaDatos").appendChild(ul),
             document.getElementById("info") = "";
         })
+    }
+
+    const limpiarCampos = () => {
+            document.getElementById("NOM").value = "";
+            document.getElementById("ape").value = "";
+            document.getElementById("tel").value = "";
+            document.getElementById("doc").value = "";
+            document.getElementById("corr").value = "";
+            document.getElementById("dat").value = "";
+            document.getElementById("Masculino").checked = false;
+            document.getElementById("Femenino").checked = false;
     }
 
 </script>

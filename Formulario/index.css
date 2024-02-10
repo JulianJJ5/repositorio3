@@ -4,11 +4,13 @@
 }
 
 #formulario{
-    margin-left: 22%; /* 20 */
     top: 25%; /* 28 */
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3fr, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
    
 }
 
@@ -86,21 +88,24 @@
     border-style: groove;
     border-color: rgb(7, 133, 93);
     background-color: rgba(27, 157, 131, 0.645);
-    width: 99.3%;
+    width: 100%;
     height: 30px;
     font-size: 140%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
 }
 
 #tp{
     cursor: pointer;
     border-radius: 10px;
-    width: 10%;
+    
 }
 
 @media screen and (max-width: 647px) and (min-width: 200px){
     #formulario{
-        margin-left: 10%; 
-        top: 20%; 
+        margin-left: 15%; 
+        top: 5%; 
     }
 
     .columnas{
@@ -109,40 +114,30 @@
     }
 
     #botn{
-        width: 90%;
+        width: 100%;
         font-size: 120%;
+        gap: 0%;
     }
 
     #tp{
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 645px) and (min-width: 495px){
-    #formulario{
-        margin-left: 5%; 
-        top: 18%; 
+        width: 100%;
     }
 
-    .columnas{
-        width: 95%;
-        height: auto;
+    #primera{
+        display: inline;
+       
     }
-
-    #botn{
-        width: 90%;
-        font-size: 110%;
-    }
-
-    #tp{
-        width: 35%;
+    
+    #segunda{
+        display: inline;
+        
     }
 }
 
 @media screen and (max-width: 735px) and (min-width: 647px){
     #formulario{
-        margin-left: 15%; 
-        top: 23%; 
+        margin-left: 30%; 
+        top: 5%; 
     }
 
     .columnas{
@@ -151,39 +146,59 @@
     }
 
     #botn{
-        width: 90%;
-        font-size: 130%;
+        width: 110%;
+        font-size: 100%;
     }
 
     #tp{
-        width: 25%;
+        width: 100%;
+    }
+
+    #primera{
+        display: inline;
+       
+    }
+    
+    #segunda{
+        display: inline;
+        
     }
 }
 
 @media screen and (max-width: 800px) and (min-width: 735px){
     #formulario{
         margin-left: 18%; 
-        top: 25%; 
+        top: 10%; 
     }
 
     .columnas{
-        width: 110%;
+        width: 100%;
         height: auto;
     }
 
     #botn{
-        width: 90%;
+        width: 100%;
         font-size: 140%;
     }
 
     #tp{
-        width: 20%;
+        width: 100%;
     }
+
+    #primera{
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+    }
+    
+    #segunda{
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        }
 }
 
 @media screen and (max-width: 900px) and (min-width: 800px){
     #formulario{
-        margin-left: 20%; 
+        margin-left: 3%; 
         top: 27%; 
     }
 
@@ -193,7 +208,7 @@
     }
 
     #botn{
-        width: 90%;
+        width: 99.5%;
         font-size: 150%;
     }
 
