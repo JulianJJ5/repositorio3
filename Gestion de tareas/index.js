@@ -1,30 +1,58 @@
-let tarea = {}
-let actividad = []
+let tareas = [];
 
-const add_tarea = () => {
-    if(document.getElementById("priori").checked) {
-        tarea.prioridad = "Alta"
-    } else {
-        tarea.prioridad = "Baja"
+    const agregarTarea = () => {
+        const actividad = document.getElementById("actividad").value;
+        const fecha = document.getElementById("fecha").value;
+        const prioridad = document.getElementById("prioridad").checked ? "Alta" : "Baja";
+
+        if (actividad && fecha) {
+            tareas.push({ actividad, fecha, prioridad });
+            actualizarTabla();
+        } else {
+            alert("Por favor, complete todos los campos.");
+        }
     }
-    tarea.nombre = document.getElementById("nme").value,
-    tarea.fec = document.getElementById("fecha").value
-}
-actividad.push(tarea)
 
-const crear = () => {
-    actividad.forEach((item, i) => {
-    let th1 = document.createElement("th")
-    th1.textContent = item.nombre
-    let th2 = document.createElement("th")
-    th2.textContent = item.prioridad
-    let th3 = document.createElement("th")
-    th3.textContent = item.fec
-    document.getElementById("cam").appendChild(th1),
-    document.getElementById("cam").appendChild(th2),
-    document.getElementById("cam").appendChild(th3),
-            document.getElementById("actividad") = "";
-    
-})}
+    const actualizarTabla = () => {
+        const tablaContainer = document.getElementById("tablaContainer");
+        tablaContainer.innerHTML = "";
 
-console.log(tarea);
+        if (tareas.length === 0) return;
+
+        const tabla = document.createElement("table");
+        const encabezado = tabla.createTHead();
+        const fila = encabezado.insertRow();
+        const encabezados = ["Actividad", "Prioridad", "Fecha"];
+        
+        encabezados.forEach(header => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            fila.appendChild(th);
+        });
+
+        const cuerpo = tabla.createTBody();
+        tareas.forEach(tarea => {
+            const fila = cuerpo.insertRow();
+            fila.insertCell().textContent = tarea.actividad;
+            fila.insertCell().textContent = tarea.prioridad;
+            fila.insertCell().textContent = tarea.fecha;
+        });
+
+        tablaContainer.appendChild(tabla);
+    }
+
+        const ordenarTareas = () => {
+        tareas.sort((a, b) => {
+            if (a.prioridad === b.prioridad) {
+                return 0;
+            } else if (a.prioridad === "Alta") {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+
+        
+ 
+        actualizarTabla();
+    }
