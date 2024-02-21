@@ -102,6 +102,30 @@
     
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+th{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
 @media screen and (max-width: 647px) and (min-width: 200px){
     #formulario{
         margin-left: 15%; 
@@ -213,6 +237,29 @@
     }
 
     #tp{
-        width: 18%;
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 1920px) and (min-width: 900px){
+    #formulario{
+        margin-left: 3%; 
+        top: 27%; 
+    }
+
+    .columnas{
+        width: 110%;
+        height: auto;
+    }
+
+    #botn{
+        width: 99.5%;
+        font-size: 150%;
+    }
+
+    #tp{
+        width: 100%;
     }
 }

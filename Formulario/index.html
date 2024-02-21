@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>Formulario</title>
 </head>
 
@@ -16,32 +17,32 @@
                 <div id="nombres">
                     <h1>Nombres</h1>
                 </div> <br>
-                <input type="text" placeholder="Ingrese sus nombres" id="NOM" required><br>
+                <input type="text" id="nombre" placeholder="Ingrese sus nombres" name="nombre"><br>
             </div>
 
             <div class="columnas">
                 <div id="apellidos">
                     <h1>Apellidos</h>
                 </div> <br>
-                <input type="text" id="ape" placeholder="Ingrese sus apellidos" required><br>
+                <input type="text" id="apellido" placeholder="Ingrese sus apellidos" name="apellido"><br><br>
             </div>
 
             <div class="columnas">
                 <div id="genero">
                     <h1>Género</h1> <br>
                 </div>
-                <div class="gen"> <input type="radio" id="Masculino" name="h" value="Masculino">
-                    <label>Masculino</label></div>
-                <div class="gen"> <input type="radio" id="Femenino" name="h" value="Femenino"> <label>Femenino</label>
-                </div>
+                <input type="radio" id="Masculino" name="h" value="Masculino">
+                <label>Masculino</label>
+                <input type="radio" id="Femenino" name="h" value="Femenino">
+                <label>Femenino</label>
             </div>
 
 
             <div class="columnas">
-                <div id="telefono">
+                <div id="tel">
                     <h1>Teléfono</h1>
                 </div> <br>
-                <input type="text" id="tel" placeholder="Ingrese su numero telefonico" required><br>
+                <input type="text" id="telefono" placeholder="Ingrese su teléfono" name="telefono"><br><br>
             </div>
         </div>
         <div id="segunda">
@@ -60,94 +61,30 @@
                 <div id="num_doc">
                     <h2>Número de documento</h2>
                 </div>
-                <input type="text" placeholder="Ingrese su documento" id="doc" required><br>
+                <input type="text" id="documento" placeholder="Ingrese su documento" name="documento"><br><br>
             </div>
 
             <div class="columnas">
-                <div id="correo">
+                <div id="corr">
                     <h1>Correo</h1>
                 </div> <br>
-                <input type="email" id="corr" placeholder="Ingrese su correo" required><br>
+                <input type="text" id="correo" placeholder="Ingrese su correo" name="correo"><br><br>
             </div>
 
             <div class="columnas">
                 <div id="Fecha">
                     <h2>Fecha de nacimiento</h2>
                 </div>
-                <input type="date" id="dat">
+                <input type="date" id="fecha" name="fecha"><br><br>
             </div>
         </div>
-        <div id="botn">
-            <div id="enviar">
-                <button id="tp" onclick="enviar(), pintar(), limpiarCampos()">ENVIAR</button>
+            <div id="botn">
+                <div id="enviar">
+                    <button type="button" onclick="agregarDatos(), limpiar()">Agregar</button>
+                </div>
             </div>
-            <div>
-                <button id="tp" onclick="limpiarCampos()">LIMPIAR CAMPOS</button>
-            </div>
-        </div>
-    </div>
 
-    <div>
-        <h2 id="listaDatos"></h2>
+            <div id="tabla-container"></div>
     </div>
 </body>
-<script>
-    let info = []
-
-    function enviar() {
-        let x = ""
-
-        if (document.getElementById("Masculino").checked) {
-            console.log("Masculino");
-            x = "Masculino"
-        } else {
-            console.log("Femenino");
-            x = "Femenino"
-        }
-
-        let datos = {}
-        datos = {
-            nombres: document.getElementById("NOM").value,
-            apellidos: document.getElementById("ape").value,
-            genero: x,
-            telefono: document.getElementById("tel").value,
-            tipo_documento: document.getElementById("list").value,
-            numero_documento: document.getElementById("doc").value,
-            correo_electronico: document.getElementById("corr").value,
-            fecha_nacimiento: document.getElementById("dat").value
-        }
-        console.log(datos);
-
-
-        info.push(datos)
-        console.log(info);
-    }
-
-    function pintar() {
-        info.forEach((item, i) => {
-            let ul = document.createElement("ul")
-            let li = document.createElement("li")
-            li.textContent = item.nombres + " - " + item.apellidos + " - " +
-            item.genero + " - " + item.telefono + " - " + item.tipo_documento + " - " + 
-            item.numero_documento + " - " + item.correo_electronico + " - " + 
-            item.fecha_nacimiento
-            ul.appendChild(li)
-            document.getElementById("listaDatos").appendChild(ul),
-            document.getElementById("info") = "";
-        })
-    }
-
-    const limpiarCampos = () => {
-            document.getElementById("NOM").value = "";
-            document.getElementById("ape").value = "";
-            document.getElementById("tel").value = "";
-            document.getElementById("doc").value = "";
-            document.getElementById("corr").value = "";
-            document.getElementById("dat").value = "";
-            document.getElementById("Masculino").checked = false;
-            document.getElementById("Femenino").checked = false;
-    }
-
-</script>
-
 </html>

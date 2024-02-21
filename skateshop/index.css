@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: name;
+    src: url(letra.ttf);
+}
+
+
+/* -------------------------------BARRA DE NAVEGACIÓN----------------------------------- */
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+
+}
+
+ul{
+    list-style-type: none;   
+}
+
+#navegacion{
+    background-color: black;
+    padding: 0.7%;
+}
+
+#menu{
+    display: flex;
+    width: 100%;
+}
+
+#tipe{
+    font-size: 170%;
+    font-family: name;
+    src: url(letra.ttf);
+    padding-right: 12%;
+    white-space: nowrap;
+}
+
+#centro{
+    display: flex;
+    gap: 45%;
+    font-size: 120%;
+    padding-right: 30%;
+    padding-top: 0.5%;
+}
+
+#search{
+    white-space: nowrap;
+    margin-right: 5%;
+    padding-top: 0.3%;
+}
+
+#buscador{
+    padding: 2%;
+}
+
+#btn_buscar{
+    padding: 1%;
+}
+
+#carro{
+    width: 25%;
+}
+
+/* --------------------------------------- CATEGORIAS ----------------------------------------- */
+
+#contenedor1{
+    padding-left: 10%;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+.fondos{
+width: 80%;
+height: 350px;
+position: relative;
+left: 10%;
+}

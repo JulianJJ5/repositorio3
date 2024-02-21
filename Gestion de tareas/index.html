@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="./index.css">
 <script src="index.js"></script>
 </head>
+
+
 <body>
 <div id="container">
 <h2>Nueva Tarea</h2>
@@ -16,7 +18,7 @@
 <input type="date" id="fecha"><br><br>
 <label for="prioridad">Prioridad Alta:</label>
 <input type="checkbox" id="prioridad"><br><br>
-<button onclick="agregarTarea()">Agregar Tarea</button>
+<button onclick="agregarTarea(), limpiar()">Agregar Tarea</button>
 <button onclick="ordenarTareas()">Ordenar</button>
 
 <div id="tablaContainer"></div>
